@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			html,body{
+				height:100%;
+			}
+			.swiper-container{
+				height:100%;
+				overflow:hidden;
+			}
+			.one{
+				background: url(img/index-bg.png) no-repeat left bottom;
+				background-size: contain;
+				background-color: #f8f3f7;
+			}
+			.one img{
+				width: 50%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: 45% auto 0;
+			}
+			.one p{
+				width: 100%;
+				text-align: center;
+				position: absolute;
+				top: 60%;
+				left: 0;
+				font-size:24px;
+				font-weight: bold;				
+			}
+			.two{
+				background: url(img/two-bg.png) no-repeat left top;
+				background-size: contain;
+				background-color: #f8f3f7;
+			}
+			.two .title1{
+				font-size: 24px;
+				text-align: center;
+				color: #787878;
+				width: 100%;
+				position: absolute;
+				top: 55%;
+				left: 0;
+			}
+			.two .title2{
+				font-size: 24px;
+				color: #787878;
+				width: 100%;
+				position: absolute;
+				top: 65%;
+				left: 0;
+			}
+			.two .title2 .red{
+				font-size: 38px;
+				color: #e4366b;
+			}
+			.two .title2 .big{
+				font-size: 38px;
+			}
+			.three{
+				background-color: #f8f3f7;
+			}
+			.jt{
+				width: 8%;
+				margin: 16% auto 0;
+			}
+			.jt img{
+				width: 100%;
+			}
+			.three .title{
+				font-size: 24px;
+				font-weight: bold;
+				text-align: center;
+				color: #e4366b;
+				width: 100%;
+				position: absolute;
+				top: 25%;
+				left: 0;
+			}
+			.three #oCanvas{
+				position: absolute;
+				/*top: 35%;*/
+				top: 0;
+				left: 0;
+			}
+			.three #oCanvas2{
+				position: absolute;
+				/*top: 35%;*/
+				top: 0;
+				left: 0;
+				z-index: 999;
+			}
+			.three .bot{
+				width: 70%;
+				position: absolute;
+				top: 70%;
+				left: 10%;	
+			}
+			.four{
+				background: url(img/four-bg.png) no-repeat center center;
+				background-size: 70%; 
+				background-color: #f8f3f7;
+			}
+			.four .title{
+				font-size: 34px;
+				font-weight: bold;
+				text-align: center;
+				color: #e4366b;
+				width: 100%;
+				position: absolute;
+				top: 15%;
+				left: 0;
+			}
+			.four .bot{
+				width: 55%;
+				position: absolute;
+				top: 68%;
+				left: 20%;	
+			}
+			.five{
+				background-color: #f8f3f7;
+			}
+			.five .title{
+				font-size: 34px;
+				font-weight: bold;
+				text-align: center;
+				color: #e4366b;
+				width: 100%;
+				position: absolute;
+				top: 45%;
+				left: 0;
+			}
+			.five .buyBtn{
+				width: 40%;
+				height: 10%;
+				font-size: 22px;
+				text-align: center;
+				line-height: 260%;
+				color: white;
+				border-radius: 6%;
+				background: #e2376b;
+				position: absolute;
+				left: 30%;
+				bottom: 20%;
+			}
+			.swiper-pagination-bullet-active{
+				background: #e3366b;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide one">
+					<img src="img/index-logo.png"/>
+					<p>秀出你的每一天</p>
+				</div>
+				<div class="swiper-slide two">
+					<p class="title1">多联系，不孤单</p>
+					<p class="title2">
+						<span class="red">走秀</span>与
+						<span class="big">你相伴</span>
+					</p>
+				</div>
+				<div class="swiper-slide three">
+					<div class="jt">
+						<img src="img/three-jt1.png" alt="" class="jt1 ani infinite" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+						<img src="img/three-jt2.png" alt="" class="jt2 ani infinite" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+						<img src="img/three-jt3.png" alt="" class="jt3 ani infinite" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+					</div>
+					<p class="title">放入购物袋</p>
+					<canvas id="oCanvas"></canvas>
+					<canvas id="oCanvas2"></canvas>
+					<img src="img/three-bot.png" alt="" class="bot" />
+				</div>
+				<div class="swiper-slide four">
+					<p class="title">走秀网商品</p>
+					<img src="img/four-bot.png" alt="" class="bot" />
+				</div>
+				<div class="swiper-slide five">
+					<div class="jt">
+						<img src="img/three-jt1.png" alt="" class="jt1 ani infinite" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+						<img src="img/three-jt2.png" alt="" class="jt2 ani infinite" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+						<img src="img/three-jt3.png" alt="" class="jt3 ani infinite" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+					</div>
+					<p class="title">
+						NOW,开始走秀购物之行......
+					</p>
+					<div class="buyBtn">开始体验</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper(".swiper-container",{
+				pagination:".swiper-pagination",
+				onInit:function(mySwiper){
+					swiperAnimateCache(mySwiper);
+					swiperAnimate(mySwiper);
+				},
+				onSlideChangeEnd:function(mySwiper){
+					swiperAnimate(mySwiper);
+				},
+			});
+			var oCanvas = document.getElementById("oCanvas");
+			var myCanvas = oCanvas.getContext("2d");
+			var oCanvas2 = document.getElementById("oCanvas2");
+			var myCanvas2 = oCanvas2.getContext("2d");
+			var wid = document.documentElement.clientWidth||document.body.clientWidth;
+			var hei = document.documentElement.clientHeight||document.body.clientHeight;
+			oCanvas.setAttribute("width",wid);
+			oCanvas.setAttribute("height",hei);
+			oCanvas2.setAttribute("width",wid);
+			oCanvas2.setAttribute("height",hei);
+			myCanvas.beginPath();
+			myCanvas.arc(0.5*wid,0.45*hei,0.2*wid,0,2*Math.PI,false);
+			myCanvas.strokeStyle = "#E2376B";
+			myCanvas.lineWidth=4;
+			myCanvas.stroke();
+			myCanvas.closePath();
+			
+			myCanvas.beginPath();
+			myCanvas.arc(0.5*wid,0.45*hei,0.015*wid,0,2*Math.PI,false);
+			myCanvas.fillStyle = "#E2376B";
+			myCanvas.fill();
+			myCanvas.closePath();
+	//		页面加载完成加载一次指针
+			drawClock();
+	//		之后每一秒调用一次画指针
+			var draw = setInterval(drawClock,1000);
+			
+			function drawClock(){
+	//			清除上一秒的指针
+				myCanvas2.clearRect(0,0,wid,hei)
+				var time = new Date();
+				var hour = time.getHours()%12;
+				var minute = time.getMinutes();
+				var second = time.getSeconds();		
+				
+	//			画时针			
+				myCanvas2.beginPath()
+				myCanvas2.moveTo(0.5*wid+0.02*wid*(Math.cos((hour+minute/60+second/3600)*Math.PI/6-Math.PI/2)),0.45*hei+0.02*wid*(Math.sin((hour+minute/60+second/3600)*Math.PI/6-Math.PI/2)));
+				myCanvas2.lineTo(0.5*wid+0.1*wid*(Math.cos((hour+minute/60+second/3600)*Math.PI/6-Math.PI/2)),0.45*hei+0.1*wid*(Math.sin((hour+minute/60+second/3600)*Math.PI/6-Math.PI/2)));
+				myCanvas2.lineWidth=7;
+				myCanvas.lineBorderRadius = "5";
+				myCanvas2.strokeStyle = "#E2376B";
+				myCanvas2.stroke();
+				myCanvas2.closePath();
+				
+	//			画分针
+				myCanvas2.beginPath();
+				myCanvas2.moveTo(0.5*wid+0.02*wid*(Math.cos((minute+second/60)*Math.PI/6-Math.PI/2)),0.45*hei+0.02*wid*(Math.sin((minute+second/60)*Math.PI/6-Math.PI/2)));
+				myCanvas2.lineTo(0.5*wid+0.13*wid*(Math.cos((minute+second/60)*Math.PI/6-Math.PI/2)),0.45*hei+0.13*wid*(Math.sin((minute+second/60)*Math.PI/6-Math.PI/2)));
+				myCanvas2.lineWidth=7;
+				myCanvas2.strokeStyle = "#E2376B";
+				myCanvas2.stroke();
+				myCanvas2.closePath();			
+//				
+//	//			画秒针
+				myCanvas2.beginPath();
+				myCanvas2.lineWidth=7;
+				myCanvas2.strokeStyle = "#E2376B";
+				myCanvas2.moveTo(0.5*wid+0.02*wid*(Math.cos((second)*Math.PI/6-Math.PI/2)),0.45*hei+0.02*wid*(Math.sin((second)*Math.PI/6-Math.PI/2)));
+				myCanvas2.lineTo(0.5*wid+0.16*wid*(Math.cos((second)*Math.PI/6-Math.PI/2)),0.45*hei+0.16*wid*(Math.sin((second)*Math.PI/6-Math.PI/2)));
+				myCanvas2.stroke();
+				myCanvas2.closePath();			
+			}
+		</script>
+	</body>
+</html>
